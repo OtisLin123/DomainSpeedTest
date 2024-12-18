@@ -1,16 +1,6 @@
 # domain_speed_estimate
 
-A new Flutter project.
+定義Downloader 為下載介面
+透過HttpDownloader、MockDownloader 實作串接http 或是產生隨機數模擬下載結果。
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+按下右下角test 按鈕，進行測試，將結果顯示於畫面上。
