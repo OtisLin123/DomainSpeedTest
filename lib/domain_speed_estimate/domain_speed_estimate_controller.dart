@@ -1,16 +1,18 @@
 import 'package:domain_speed_estimate/domain_speed_estimate/domain_speed_info.dart';
 import 'package:domain_speed_estimate/domain_speed_estimate/downloader.dart';
-import 'package:domain_speed_estimate/domain_speed_estimate/http_downloader.dart';
 import 'package:flutter/foundation.dart';
-// import 'package:domain_speed_estimate/domain_speed_estimate/mock_downloader.dart';
 
 class DomainSpeedEstimateController {
-  Downloader downloader = HttpDownloader();
-  // Downloader downloader = MockDownloader();
+  Downloader? downloader;
+
   final ValueNotifier<List<DomainSpeedInfo>> infos = ValueNotifier([]);
 
+  DomainSpeedEstimateController({
+    required this.downloader,
+  });
+
   Future<double?> downloadImg({required String domain}) async {
-    double? time = await downloader.download(domain: domain);
+    double? time = await downloader?.download(domain: domain);
     return time;
   }
 

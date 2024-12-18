@@ -1,5 +1,7 @@
 import 'package:domain_speed_estimate/domain_speed_estimate/domain_speed_estimate_controller.dart';
 import 'package:domain_speed_estimate/domain_speed_estimate/domain_speed_info.dart';
+import 'package:domain_speed_estimate/domain_speed_estimate/http_downloader.dart';
+import 'package:domain_speed_estimate/domain_speed_estimate/mock_downloader.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -30,7 +32,9 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  DomainSpeedEstimateController controller = DomainSpeedEstimateController();
+  DomainSpeedEstimateController controller = DomainSpeedEstimateController(
+    downloader: HttpDownloader(), //MockDownloader(),
+  );
 
   void test() async {
     int count = 6;
